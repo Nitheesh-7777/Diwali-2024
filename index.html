@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali 2024!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="triggerBlast()">
+    <div class="container">
+        <h1>Happy Diwali! 🎉</h1>
+        <p>Wishing you and your family a sparkling Diwali filled with joy, light, and happiness.</p>
+        <button id="wishButton">Get Personalized Wish</button>
+    </div>
+
+    <!-- Fireworks and Bomb Animation -->
+    <div class="firework-container">
+        <div class="firework" id="firework1"></div>
+        <div class="firework" id="firework2"></div>
+        <div class="firework" id="firework3"></div>
+    </div>
+    <div class="bomb" id="bomb"></div>
+
+    <!-- Sound Effect for Bomb Blast -->
+    <audio id="blastSound" src="blast-sound.mp3" preload="auto"></audio>
+
+    <script>
+        document.getElementById('wishButton').addEventListener('click', () => {
+            alert("Dear BROTHERS & SISTERS, this Diwali, may all your wishes come true! - From your Super Software Engineer Brother 🌟");
+        });
+
+        function triggerBlast() {
+            // Play blast sound effect with a slight delay for synchronization
+            setTimeout(() => {
+                document.getElementById('blastSound').play();
+            }, 300);
+
+            // Start bomb explosion animation
+            document.getElementById('bomb').classList.add('explode');
+        }
+    </script>
+</body>
+</html>
